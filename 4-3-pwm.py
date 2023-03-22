@@ -1,13 +1,12 @@
 import RPi.GPIO as GPIO
 
-freq = 1
-out_pin = 24
+freq = 100
+out_pin = 2
 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(out_pin, GPIO.OUT)
 
-freq = 1
 pwm = GPIO.PWM(out_pin, freq)
 
 pwm.start(0)
